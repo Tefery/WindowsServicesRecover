@@ -20,6 +20,8 @@ Si algún dia subo un .jar, se ejecutaría con:
 
 `Java -jar WindowsServicesRecover.jar servides.reg`
 
+Recomiendo ejecutarlo estándo en modo a prueba de errores con simbolo del sistema.
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
