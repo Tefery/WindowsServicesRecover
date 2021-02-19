@@ -12,7 +12,7 @@ La clave a exportar es exactamente: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet
 
 Hay un fichero de registro de un Windows 10 20H2 en la raiz del proyecto [servides.reg](https://github.com/Tefery/WindowsServicesRecover/blob/main/servides.reg). Es la que he extraido y usado yo, y parece que el pc ha vuelto a un estado mas o menos estable.
 
-Se compila y se le envia como argumento el archivo ***.reg***
+Se compila con la [JDK15](https://jdk.java.net/15/) y se le envia como argumento el archivo ***.reg***
 
 Si algún dia subo un .jar, se ejecutaría con:
 
