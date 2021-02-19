@@ -16,7 +16,7 @@ Se compila y se le envia como argumento el archivo ***.reg***
 
 Si algún dia subo un .jar, se ejecutaría con:
 
-`Java -jar 
+``Java -jar WindowsServicesRecover.jar servides.reg``
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
