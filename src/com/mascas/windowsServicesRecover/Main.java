@@ -10,7 +10,7 @@ import java.util.Comparator;
 
 public class Main {
 
-    private static final String REG_HEADER = "Windows Registry Editor Version 5.00";
+    private static final String REG_HEADER_REGEX = "(^Windows Registry Editor Version (\\d)+\\.(\\d)+$)";
     private static final String RAIZ = "[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\";
     private static final String REG_EXT = ".reg";
     private static final String SALTO = "\r\n";
@@ -33,7 +33,7 @@ public class Main {
             for (int i = 1; i < args.length; i++) {
                 errorMsg += ", o con " + args[i];
             }
-            System.out.println(errorMsg);
+            System.out.println(errorMsg + "?");
             return;
         }
 
@@ -65,10 +65,11 @@ public class Main {
         fileOutW = null;
         writer = null;
         line = zxc.readLine();
-        if (!line.equals(REG_HEADER)) {
+        if (!line.matches(REG_HEADER_REGEX)) {
             System.out.println("Fichero incompleto, vete a cagar a la via...");
             return;
         }
+        final String originalRegHeader = line;
         zxc.readLine();
         line = zxc.readLine();
         if (!line.equals("[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services]")) {
@@ -83,7 +84,7 @@ public class Main {
                 fileOut = new File(salida + newService + REG_EXT);
                 fileOutW = new FileOutputStream(fileOut);
                 writer = new BufferedWriter(new OutputStreamWriter(fileOutW, StandardCharsets.US_ASCII));
-                writer.write(REG_HEADER + SALTO);
+                writer.write(originalRegHeader + SALTO);
                 writer.write(SALTO);
             }
             writer.write(line + SALTO);
