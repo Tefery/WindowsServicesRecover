@@ -22,6 +22,8 @@ Si algún dia subo un .jar, se ejecutaría con:
 
 Recomiendo ejecutarlo estándo en modo a prueba de errores con simbolo del sistema.
 
+# Desconozco que posibles problemas a largo plao puede causar este proceso a Windows, no me responsabilizo de cualquier tipo de daño o error provocado por esta aplicación, si lo usaste mal o sin necesidad, apoquina con las consecuencias.
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
