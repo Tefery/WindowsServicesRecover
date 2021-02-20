@@ -100,18 +100,19 @@ public class Main {
                     respuesta = scan.nextLine();
                 } while (respuesta.length() == 0 && ++tontoCounter < 5);
                 switch (respuesta.toUpperCase()) {
-                    case "N", "NO":
+                    case "N", "NO" -> {
                         System.out.println("Haz lo que te salga del nardo/conio con la carpeta y vuelve a intentarlo...");
                         return;
-                    case "S", "SI", "Y", "YES":
-                        System.out.println("Haciendo como que esto nunca ha ocurrido...\n");
-                        break;
-                    case "":
+                    }
+                    case "S", "SI", "Y", "YES" -> System.out.println("Haciendo como que esto nunca ha ocurrido...\n");
+                    case "" -> {
                         System.out.println("Ya hemos tocado con el tonto, pues te quedas sin arreglo...");
                         return;
-                    default:
+                    }
+                    default -> {
                         System.out.println(respuesta + " no es una respuesta valida, dare por hecho que era un no...");
                         return;
+                    }
                 }
             }
             deleteDirectoryStream(qwe.toPath());
