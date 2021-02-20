@@ -27,7 +27,7 @@ Recomiendo ejecutarlo estándo en modo a prueba de errores con simbolo del siste
 ### Desconozco que posibles problemas puede causar este proceso a Windows a largo plazo, no me responsabilizo de cualquier tipo de daño o error provocado por esta aplicación a tu equipo, si lo usaste mal o sin necesidad, apoquina con las consecuencias.
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Cualquier cambio a mejor es bienvenido, soy consciente de que la aplicación es fea y cutre, pero hace lo que se le pide.
 
 ## License
 [GNU AGPLv3](https://choosealicense.com/licenses/agpl-3.0/)
