@@ -16,13 +16,15 @@ Hay un fichero de registro de un Windows 10 20H2 en la raiz del proyecto [servid
 
 Y os estaréis preguntando "¿Por qué voy a usar tu mierda de aplicación, si puedo hacer doble click en el archivo y ya está?” pues habría estado cojonudo que funcionase así, pero no lo hace, porque hay ciertos componentes de Windows que están usando estos registros, y con uno que falle, se cancela todo, así que hay que insertarlo de poquitos en poquitos.
 
-Se compila con la [JDK8](https://www.oracle.com/es/java/technologies/javase/javase-jdk8-downloads.html) o superior y se le envia como argumento el archivo ***.reg***. Yo recomiendo usar la [JDK15](https://jdk.java.net/15/).
+Se compila con la [JDK14](https://jdk.java.net/archive/) o superior y se le envia como argumento el archivo ***.reg***. Yo recomiendo usar la [JDK15](https://jdk.java.net/15/).
 
-El el jar está compilado para la JDK8, ya que es la version que java que tienen practicamente el total de los mortales.
+El ***.jar*** está compilado para la JDK8, ya que es la version que java que tienen practicamente el total de los mortales.
 
-El comando para ejecutarlo con el jar: `Java -jar WindowsServicesRecover.jar servides.reg`
+El comando para ejecutarlo con el ***.jar***: `Java -jar WindowsServicesRecover.jar servides.reg`
 
 Recomiendo ejecutarlo estándo en modo a prueba de errores con simbolo del sistema.
+
+Incluye un modo de solo división con el argumento `/d`, para solo dividir el archivo de registro, por si prefieres introducir por tu cuenta los 2.791 archivos de registro o lo sea que quieras hacer con ellos.
 
 ### Desconozco que posibles problemas puede causar este proceso a Windows a largo plazo, no me responsabilizo de cualquier tipo de daño o error provocado por esta aplicación a tu equipo, si lo usaste mal o sin necesidad, apoquina con las consecuencias.
 
