@@ -16,15 +16,19 @@ Hay un fichero de registro de un Windows 10 20H2 en la raiz del proyecto [servid
 
 Y os estaréis preguntando "¿Por qué voy a usar tu mierda de aplicación, si puedo hacer doble click en el archivo y ya está?” pues habría estado cojonudo que funcionase así, pero no lo hace, porque hay ciertos componentes de Windows que están usando estos registros, y con uno que falle, se cancela todo, así que hay que insertarlo de poquitos en poquitos.
 
-Se compila con la [JDK15](https://jdk.java.net/15/) y se le envia como argumento el archivo ***.reg***
+Se compila con la [JDK8](https://www.oracle.com/es/java/technologies/javase/javase-jdk8-downloads.html) o superior y se le envia como argumento el archivo ***.reg***. Yo recomiendo usar la [JDK15](https://jdk.java.net/15/).
 
-Si algún dia subo un .jar, se ejecutaría con:
+El el jar está compilado para la JDK8, ya que es la version que java que tienen practicamente el total de los mortales.
 
-`Java -jar WindowsServicesRecover.jar servides.reg`
+El comando para ejecutarlo con el jar: `Java -jar WindowsServicesRecover.jar servides.reg`
 
 Recomiendo ejecutarlo estándo en modo a prueba de errores con simbolo del sistema.
 
 ### Desconozco que posibles problemas puede causar este proceso a Windows a largo plazo, no me responsabilizo de cualquier tipo de daño o error provocado por esta aplicación a tu equipo, si lo usaste mal o sin necesidad, apoquina con las consecuencias.
+
+## EXTRA EXTRA!
+Despues de restaurar todos los servicios, a parte de que a Windows por fin le funcionaba todo, noté que iba así un poco como a pedales. Así que buscando por los mares de github me encontré con [**windows-tools**](https://github.com/jebofponderworthy/windows-tools), y oye, que ahora va como un tiro, como si hubiese reinstalado Windows vamos.
+> 100% recomendado real no fake 1 link mega
 
 ## Contributing
 Cualquier cambio a mejor es bienvenido, soy consciente de que la aplicación es fea y cutre, pero hace lo que se le pide.
