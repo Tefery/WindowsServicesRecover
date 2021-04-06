@@ -4,7 +4,7 @@ WindowsServicesRecover nace a raíz de que algo se ha follado mis servicios esen
 
 ## Cómo funciona
 
-Hay que partir de un archivo ***.reg*** (de esos para modificar el registro de windows) exportado de una instalación limpia de Windows de la misma versión que tu instalación actual. 
+Hay que partir de un archivo ***.reg*** (de esos para modificar el registro de windows) exportado de una instalación limpia de Windows de la misma versión (ej "20H2"), y tipo de firmware (UEFI o BIOS) que tu instalación actual. 
 > Limpia de recién instalado, no de tu primo el que parece que le va bien
 
 
@@ -12,7 +12,7 @@ La clave a exportar es exactamente: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet
 
 ![](https://raw.githubusercontent.com/Tefery/WindowsServicesRecover/main/exportPhoto.png)
 
-Hay un fichero de registro de un Windows 10 Pro 20H2 en la raiz del proyecto [servides.reg](https://github.com/Tefery/WindowsServicesRecover/blob/main/servides.reg). Es la que he extraido y usado yo, y parece que el pc ha vuelto a un estado mas o menos estable.
+Hay un fichero de registro de un Windows 10 Pro 20H2 para BIOS en la raiz del proyecto [servides.reg](https://github.com/Tefery/WindowsServicesRecover/blob/main/servides.reg). Es la que he extraido y usado yo, y parece que el pc ha vuelto a un estado mas o menos estable.
 
 Y os estaréis preguntando "¿Por qué voy a usar tu mierda de aplicación, si puedo hacer doble click en el archivo y ya está?” pues habría estado cojonudo que funcionase así, pero no lo hace, porque hay ciertos componentes de Windows que están usando estos registros, y con uno que falle, se cancela todo, así que hay que insertarlo de poquitos en poquitos.
 
